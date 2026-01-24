@@ -6,132 +6,64 @@
     <title>PINOY 365 | The Philippines' #1 Choice</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#FFD700',
-                        'gold-shiny': '#FFFACD',
-                        'pinoy-red': '#8B0000',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Efek Latar Belakang Mewah */
-        body {
-            background: radial-gradient(circle at center, #4a0404 0%, #1a0101 100%);
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Animasi Glow pada Tombol */
-        .glow-button {
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-            transition: all 0.3s ease;
-        }
-        .glow-button:hover {
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
-            transform: scale(1.05);
-        }
-
-        /* Efek Floating untuk Poster */
-        .float-anim {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0% { transform: translateY(0px) rotate(3deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-            100% { transform: translateY(0px) rotate(3deg); }
-        }
-
-        /* Gradient Teks Emas */
-        .gold-text {
-            background: linear-gradient(to bottom, #FFD700 20%, #B8860B 80%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: 'Oswald', sans-serif;
-        }
-
-        /* Glassmorphism Card */
-        .glass-premium {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            backdrop-filter: blur(15px);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="selection:bg-gold selection:text-black">
 
     <nav class="fixed w-full z-50 py-4 px-6 bg-black/80 border-b border-gold/30 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <img src="logo-pinoy365.png" alt="Pinoy 365 Logo" class="h-10 md:h-14 drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">
-            <a href="https://aj4ki.pinoy365.bet/register.html" class="bg-gradient-to-r from-gold via-gold-shiny to-gold text-black font-black px-8 py-2 rounded-full text-sm glow-button">
+            <div class="flex items-center">
+                <h1 class="gold-text text-2xl md:text-3xl font-black italic tracking-tighter">
+                    PINOY365
+                </h1>
+            </div>
+            <a href="https://aj4ki.pinoy365.bet/register.html" class="bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 text-black font-black px-8 py-2 rounded-full text-sm glow-button">
                 LOGIN / JOIN
             </a>
         </div>
     </nav>
 
     <section class="relative pt-32 pb-20 px-6 min-h-screen flex items-center overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px] -z-10"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-[120px] -z-10"></div>
-
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px] -z-10"></div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="text-center lg:text-left">
-                <p class="text-gold font-bold tracking-[0.5em] mb-4 text-xs md:text-sm animate-pulse">MALIGAYANG PASKO AT MANIGONG BAGONG TAON!</p>
-                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-none italic uppercase">
+                <p class="text-yellow-400 font-bold tracking-[0.5em] mb-4 text-xs md:text-sm animate-pulse uppercase">Maligayang Pasko at Manigong Bagong Taon!</p>
+                <h2 class="text-6xl md:text-8xl font-black mb-6 leading-none italic uppercase">
                     SMASH THE <br>
                     <span class="gold-text drop-shadow-2xl">GOLDEN EGG!</span>
-                </h1>
+                </h2>
                 <p class="text-gray-300 text-lg mb-10 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Join the biggest winning community! Enjoy the highest win rates, instant withdrawals, and daily overflowing bonuses only at <span class="text-gold">Pinoy 365</span>.
+                    Join the biggest winning community in the Philippines! Enjoy the highest win rates and daily bonuses only at <span class="text-yellow-400">Pinoy 365</span>.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                    <a href="https://aj4ki.pinoy365.bet/register.html" class="bg-gradient-to-b from-gold via-gold-shiny to-gold text-black px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center glow-button uppercase italic">
+                    <a href="https://aj4ki.pinoy365.bet/register.html" class="bg-gradient-to-b from-yellow-400 via-yellow-100 to-yellow-500 text-black px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center glow-button uppercase italic">
                         Play & Win Now 🎰
                     </a>
-                    <a href="https://t.me/BHTCLUBWITHCHELINEE" class="border-2 border-gold/50 text-gold px-10 py-5 rounded-2xl font-bold flex items-center justify-center hover:bg-gold/10 transition backdrop-blur-sm">
+                    <a href="https://t.me/BHTCLUBWITHCHELINEE" class="border-2 border-yellow-500/50 text-yellow-400 px-10 py-5 rounded-2xl font-bold flex items-center justify-center hover:bg-yellow-500/10 transition backdrop-blur-sm">
                         Live Support 📱
                     </a>
                 </div>
             </div>
 
             <div class="relative flex justify-center">
-                <div class="absolute inset-0 bg-gold/20 rounded-full blur-[100px] -z-10"></div>
-                <img src="pinoy365-poster.jpg" alt="Win Big" class="w-full max-w-[450px] rounded-3xl border-[6px] border-gold/40 shadow-[0_0_60px_rgba(255,215,0,0.3)] float-anim">
+                <img src="pinoy365-poster.jpg" alt="Win Big" class="w-full max-w-[450px] rounded-3xl border-[6px] border-yellow-500/40 shadow-[0_0_60px_rgba(255,215,0,0.3)] float-anim">
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-black/40 border-y border-gold/10">
+    <section class="py-16 bg-black/40 border-y border-yellow-500/10">
         <div class="max-w-6xl mx-auto px-6">
-            <p class="text-center text-gold/60 text-xs font-black uppercase tracking-[0.3em] mb-10">Secured Payout Partners</p>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70 hover:opacity-100 transition duration-500">
-                <img src="logo-gcash.png" alt="GCash" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
-                <img src="logo-maya.png" alt="Maya" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
-                <img src="logo-bdo.png" alt="BDO" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
-                <img src="logo-bpi.png" alt="BPI" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
-                <img src="logo-unionbank.png" alt="UnionBank" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
+            <p class="text-center text-yellow-500/60 text-xs font-black uppercase tracking-[0.3em] mb-10 text-center">Secured Payout Partners</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70">
+                <img src="logo-gcash.png" alt="GCash" class="h-10 mx-auto">
+                <img src="logo-maya.png" alt="Maya" class="h-10 mx-auto">
+                <img src="logo-bdo.png" alt="BDO" class="h-10 mx-auto">
+                <img src="logo-bpi.png" alt="BPI" class="h-10 mx-auto">
+                <img src="logo-unionbank.png" alt="UnionBank" class="h-10 mx-auto">
             </div>
         </div>
     </section>
-
-    <footer class="py-12 px-6 border-t border-gold/20 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-3xl font-black gold-text mb-4 italic">PINOY 365.</h3>
-            <p class="text-gray-500 text-sm mb-6">Experience the elite gaming lounge. Secured, Trusted, and Fair Play System.</p>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="mailto:chelinjuly@gmail.com" class="text-gold hover:text-white transition">Email Us</a>
-                <span class="text-gold/20">|</span>
-                <a href="https://t.me/BHTCLUBWITHCHELINEE" class="text-gold hover:text-white transition">Telegram CSR</a>
-            </div>
-            <p class="text-[10px] text-gray-600 tracking-[0.2em] font-bold">&copy; 2026 PINOY 365 GAMING PHILIPPINES. ALL RIGHTS RESERVED.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
