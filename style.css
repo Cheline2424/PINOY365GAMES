@@ -1,4 +1,11 @@
-/* style.css */
+/* style.css - PINOY365 Optimized Version */
+
+:root {
+    --gold: #FFD700;
+    --gold-light: #FFFACD;
+    --gold-dark: #B8860B;
+}
+
 body {
     background: radial-gradient(circle at center, #3d0202 0%, #1a0101 50%, #000000 100%);
     background-attachment: fixed;
@@ -6,6 +13,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 body::before {
@@ -16,76 +24,106 @@ body::before {
     opacity: 0.15; z-index: -1; pointer-events: none;
 }
 
+/* SEO & Performance Friendly Shine */
 .gold-text {
-    background: linear-gradient(to right, #FFD700 20%, #FFFACD 50%, #FFD700 80%);
+    background: linear-gradient(to right, var(--gold) 20%, var(--gold-light) 50%, var(--gold) 80%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s linear infinite;
     font-family: 'Oswald', sans-serif;
-    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
 }
 
 @keyframes shine { to { background-position: 200% center; } }
 
+/* Button Optimization */
 .glow-button {
-    background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .glow-button:hover {
-    box-shadow: 0 0 50px rgba(255, 215, 0, 0.9);
-    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+    transform: translateY(-3px) scale(1.02);
 }
 
-/* KESERAGAMAN GAMBAR GAME CARD */
+.glow-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Game Cards */
 .img-container {
     width: 100%;
-    height: 180px; /* Tinggi seragam untuk semua logo game */
+    height: 140px; /* Dikurangi sedikit untuk mobile agar pas di grid */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+    .img-container {
+        height: 180px; /* Kembali ke ukuran normal di desktop */
+    }
+}
+
 .img-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Menjaga logo tidak gepeng/terpotong */
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
 .game-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 215, 0, 0.1);
-    padding: 20px;
-    border-radius: 24px;
+    padding: 15px; /* Lebih kecil untuk mobile */
+    border-radius: 20px;
     transition: all 0.4s ease;
 }
 
+@media (min-width: 768px) {
+    .game-card {
+        padding: 20px;
+        border-radius: 24px;
+    }
+}
+
 .game-card:hover {
-    background: rgba(255, 215, 0, 0.05);
-    border-color: #FFD700;
-    transform: translateY(-10px);
+    background: rgba(255, 215, 0, 0.08);
+    border-color: var(--gold);
+    transform: translateY(-8px);
 }
 
 .game-card:hover .img-container img {
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
+/* Animations */
 .float-anim { animation: floating 6s ease-in-out infinite; }
 @keyframes floating {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-30px); }
+    50% { transform: translateY(-20px); }
 }
 
 .animate-marquee {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 30s linear infinite;
+    animation: marquee 25s linear infinite;
 }
+
 @keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Touch Device Support */
+@media (hover: none) {
+    .game-card:hover { transform: none; }
+    .glow-button:hover { transform: none; }
 }
