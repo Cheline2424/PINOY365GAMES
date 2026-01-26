@@ -23,8 +23,8 @@
 <body class="selection:bg-yellow-500 selection:text-black">
 
     <div class="fixed top-0 w-full z-[60] bg-red-600 text-white py-1 overflow-hidden whitespace-nowrap text-[10px] font-bold uppercase tracking-widest border-b border-yellow-500">
-        <div class="animate-marquee inline-block">
-            🔥 LATEST WINNERS: [P***77] won ₱15,400 in JILI Slots | [M***ko] won ₱88,200 in Live Sabong | [J***99] won ₱5,000 in PG Soft | [A***ki] won ₱120,500 in Crazy Time 🔥
+        <div id="dynamic-marquee" class="animate-marquee inline-block">
+            🔥 LOADING LATEST WINNERS FROM PINOY365 SERVER... 🔥
         </div>
     </div>
 
@@ -181,11 +181,36 @@
     </footer>
 
     <script>
+        // 1. FAKE WINNER GENERATOR
+        function generateFakeWinners() {
+            const names = ['Juan', 'Maria', 'Santy', 'Rex', 'Lodi', 'Pau', 'Miko', 'Chard', 'Kiko', 'Bebs', 'Renz', 'Deng', 'Aris', 'Jojo', 'Berto', 'Elena'];
+            const games = ['JILI Slots', 'PG Soft', 'Live Sabong', 'Crazy Time', 'Super Ace', 'Gate of Olympus', 'Fishing God', 'Mega Ball'];
+            let marqueeText = "🔥 LATEST WINNERS: ";
+
+            for (let i = 0; i < 15; i++) {
+                let randomName = names[Math.floor(Math.random() * names.length)];
+                let randomHidden = "***" + Math.floor(Math.random() * 99);
+                let randomWin = (Math.random() * (150000 - 1500) + 1500).toLocaleString('en-US', { maximumFractionDigits: 0 });
+                let randomGame = games[Math.floor(Math.random() * games.length)];
+                
+                marqueeText += ` [${randomName}${randomHidden}] won ₱${randomWin} in ${randomGame} | `;
+            }
+            
+            marqueeText += " 🔥 JOIN THE WINNERS NOW!";
+            document.getElementById('dynamic-marquee').innerText = marqueeText;
+        }
+
+        // 2. LIVE PROGRESSIVE JACKPOT
         let currentJackpot = 88245712.00;
-        setInterval(() => {
+        function updateJackpot() {
             currentJackpot += Math.random() * 5.50;
             document.getElementById('jackpot').innerText = '₱ ' + currentJackpot.toLocaleString('en-US', { minimumFractionDigits: 2 });
-        }, 100);
+        }
+
+        // INIT FUNCTIONS
+        generateFakeWinners();
+        setInterval(updateJackpot, 100);
+        setInterval(generateFakeWinners, 300000); // Reset nama pemenang tiap 5 menit
     </script>
 </body>
 </html>

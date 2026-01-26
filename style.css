@@ -1,4 +1,4 @@
-/* style.css - PINOY365 Optimized Version */
+/* style.css - PINOY365 Optimized Version 2026 */
 
 :root {
     --gold: #FFD700;
@@ -52,14 +52,10 @@ body::before {
     transform: translateY(-3px) scale(1.02);
 }
 
-.glow-button:active {
-    transform: scale(0.95);
-}
-
 /* Responsive Game Cards */
 .img-container {
     width: 100%;
-    height: 140px; /* Dikurangi sedikit untuk mobile agar pas di grid */
+    height: 140px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +64,7 @@ body::before {
 
 @media (min-width: 768px) {
     .img-container {
-        height: 180px; /* Kembali ke ukuran normal di desktop */
+        height: 180px; 
     }
 }
 
@@ -82,7 +78,7 @@ body::before {
 .game-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 215, 0, 0.1);
-    padding: 15px; /* Lebih kecil untuk mobile */
+    padding: 15px; 
     border-radius: 20px;
     transition: all 0.4s ease;
 }
@@ -100,8 +96,16 @@ body::before {
     transform: translateY(-8px);
 }
 
-.game-card:hover .img-container img {
-    transform: scale(1.1);
+/* Marquee Optimization - Penting untuk Fake Winners */
+.animate-marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 40s linear infinite; /* Durasi lebih lambat agar mudah dibaca */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 /* Animations */
@@ -111,15 +115,10 @@ body::before {
     50% { transform: translateY(-20px); }
 }
 
-.animate-marquee {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 25s linear infinite;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+/* FAQ Hover Effect */
+.border-b:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+    transition: 0.3s;
 }
 
 /* Touch Device Support */
