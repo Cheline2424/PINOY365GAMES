@@ -32,7 +32,7 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <h1 class="gold-text text-2xl md:text-4xl font-black italic tracking-tighter">PINOY365</h1>
             <div class="hidden md:flex gap-6 text-xs font-black uppercase italic text-yellow-500">
-                <a href="https://linkagent01.pinoy365.bet/register.html" class="hover:text-white transition" title="Play Online Slots">Slots</a>
+                <a href="games.html" class="hover:text-white transition" title="Play 60 Hot Online Slots">60 Hot Games</a>
                 <a href="https://linkagent01.pinoy365.bet/register.html" class="hover:text-white transition" title="Live Casino Games">Live Casino</a>
                 <a href="https://linkagent01.pinoy365.bet/register.html" class="hover:text-white transition" title="Online Sabong Live">Sabong</a>
                 <a href="https://linkagent01.pinoy365.bet/register.html" class="hover:text-white transition" title="Promotions">Promos</a>
@@ -70,6 +70,25 @@
         <div class="text-5xl md:text-7xl font-black gold-text italic tracking-tighter" id="jackpot">₱ 88,245,712.00</div>
     </section>
 
+    <section class="py-16 px-6 bg-gradient-to-b from-black to-zinc-900">
+        <div class="max-w-7xl mx-auto border-2 border-yellow-500/30 rounded-[40px] p-8 md:p-12 overflow-hidden relative group">
+            <div class="absolute top-0 right-0 p-4 bg-yellow-500 text-black font-black italic text-xs uppercase animate-bounce">HOT LIST 2026</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-black gold-text italic uppercase mb-4">60 HOT GAMES <br> THIS WEEK!</h3>
+                    <p class="text-gray-300 mb-6 uppercase font-bold tracking-widest text-sm">JILI • PG SOFT • PRAGMATIC • FA CHAI</p>
+                    <p class="text-gray-400 mb-8">Huwag pahuhuli! Tingnan ang aming listahan ng 60 pinaka-mainit na laro na may pinakamataas na multiplier at jackpot sa buong Pilipinas.</p>
+                    <a href="games.html" class="inline-block bg-white text-black font-black px-8 py-4 rounded-full hover:bg-yellow-500 transition-colors uppercase italic">View All 60 Games →</a>
+                </div>
+                <div class="grid grid-cols-3 gap-2 opacity-50 group-hover:opacity-100 transition duration-500">
+                    <img src="img/game-01-super-ace.png" class="rounded-lg border border-yellow-500/20" alt="Super Ace">
+                    <img src="img/game-10-mahjong-ways-2.png" class="rounded-lg border border-yellow-500/20" alt="Mahjong">
+                    <img src="img/game-25-gates-of-olympus-1000.png" class="rounded-lg border border-yellow-500/20" alt="Zeus">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
@@ -77,7 +96,7 @@
                 <p class="text-gray-400">Pinaka-legit na online games sa buong Pilipinas!</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <a href="https://linkagent01.pinoy365.bet/register.html" class="game-card group flex flex-col items-center">
+                <a href="games.html" class="game-card group flex flex-col items-center">
                     <div class="img-container mb-4">
                         <img src="slots.png" alt="Play Online Slots PH Pinoy365">
                     </div>
@@ -209,6 +228,7 @@
 
         // INIT FUNCTIONS
         generateFakeWinners();
+        updateJackpot();
         setInterval(updateJackpot, 100);
         setInterval(generateFakeWinners, 300000); // Reset nama pemenang tiap 5 menit
     </script>

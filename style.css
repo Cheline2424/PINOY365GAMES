@@ -126,3 +126,71 @@ body::before {
     .game-card:hover { transform: none; }
     .glow-button:hover { transform: none; }
 }
+/* --- GAMES.HTML MOBILE OPTIMIZED STYLES --- */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom di HP agar logo tidak raksasa */
+    gap: 12px;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(5, 1fr); /* 5 Kolom di Laptop */
+        gap: 20px;
+    }
+}
+
+.game-item-v2 {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.game-item-v2:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    background: rgba(255, 215, 0, 0.08);
+}
+
+.game-item-v2 img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.game-title-v2 {
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.jackpot-tag {
+    color: #00ff00;
+    font-size: 0.6rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.play-btn-v2 {
+    display: block;
+    background: linear-gradient(to bottom, var(--gold), var(--gold-dark));
+    color: black !important;
+    text-decoration: none;
+    font-size: 0.65rem;
+    font-weight: 900;
+    padding: 6px 0;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
