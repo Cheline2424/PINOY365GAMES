@@ -73,18 +73,11 @@
     <section class="py-16 px-6 bg-gradient-to-b from-black to-zinc-900">
         <div class="max-w-7xl mx-auto border-2 border-yellow-500/30 rounded-[40px] p-8 md:p-12 overflow-hidden relative group">
             <div class="absolute top-0 right-0 p-4 bg-yellow-500 text-black font-black italic text-xs uppercase animate-bounce">HOT LIST 2026</div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div>
-                    <h3 class="text-4xl md:text-5xl font-black gold-text italic uppercase mb-4">60 HOT GAMES <br> THIS WEEK!</h3>
-                    <p class="text-gray-300 mb-6 uppercase font-bold tracking-widest text-sm">JILI • PG SOFT • PRAGMATIC • FA CHAI</p>
-                    <p class="text-gray-400 mb-8">Huwag pahuhuli! Tingnan ang aming listahan ng 60 pinaka-mainit na laro na may pinakamataas na multiplier at jackpot sa buong Pilipinas.</p>
-                    <a href="games.html" class="inline-block bg-white text-black font-black px-8 py-4 rounded-full hover:bg-yellow-500 transition-colors uppercase italic">View All 60 Games →</a>
-                </div>
-                <div class="grid grid-cols-3 gap-2 opacity-50 group-hover:opacity-100 transition duration-500">
-                    <img src="img/game-01-super-ace.png" class="rounded-lg border border-yellow-500/20" alt="Super Ace">
-                    <img src="img/game-10-mahjong-ways-2.png" class="rounded-lg border border-yellow-500/20" alt="Mahjong">
-                    <img src="img/game-25-gates-of-olympus-1000.png" class="rounded-lg border border-yellow-500/20" alt="Zeus">
-                </div>
+            <div class="text-center py-6">
+                <h3 class="text-4xl md:text-5xl font-black gold-text italic uppercase mb-4">60 HOT GAMES <br> THIS WEEK!</h3>
+                <p class="text-yellow-500 mb-6 uppercase font-bold tracking-widest text-sm">JILI • PG SOFT • PRAGMATIC • FA CHAI</p>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Huwag pahuhuli! Tingnan ang aming listahan ng 60 pinaka-mainit na laro na may pinakamataas na multiplier at jackpot sa buong Pilipinas.</p>
+                <a href="games.html" class="inline-block bg-white text-black font-black px-10 py-5 rounded-full hover:bg-yellow-500 transition-colors uppercase italic scale-105">View All 60 Games →</a>
             </div>
         </div>
     </section>
@@ -200,7 +193,6 @@
     </footer>
 
     <script>
-        // 1. FAKE WINNER GENERATOR
         function generateFakeWinners() {
             const names = ['Juan', 'Maria', 'Santy', 'Rex', 'Lodi', 'Pau', 'Miko', 'Chard', 'Kiko', 'Bebs', 'Renz', 'Deng', 'Aris', 'Jojo', 'Berto', 'Elena'];
             const games = ['JILI Slots', 'PG Soft', 'Live Sabong', 'Crazy Time', 'Super Ace', 'Gate of Olympus', 'Fishing God', 'Mega Ball'];
@@ -211,7 +203,6 @@
                 let randomHidden = "***" + Math.floor(Math.random() * 99);
                 let randomWin = (Math.random() * (150000 - 1500) + 1500).toLocaleString('en-US', { maximumFractionDigits: 0 });
                 let randomGame = games[Math.floor(Math.random() * games.length)];
-                
                 marqueeText += ` [${randomName}${randomHidden}] won ₱${randomWin} in ${randomGame} | `;
             }
             
@@ -219,18 +210,16 @@
             document.getElementById('dynamic-marquee').innerText = marqueeText;
         }
 
-        // 2. LIVE PROGRESSIVE JACKPOT
         let currentJackpot = 88245712.00;
         function updateJackpot() {
             currentJackpot += Math.random() * 5.50;
             document.getElementById('jackpot').innerText = '₱ ' + currentJackpot.toLocaleString('en-US', { minimumFractionDigits: 2 });
         }
 
-        // INIT FUNCTIONS
         generateFakeWinners();
         updateJackpot();
         setInterval(updateJackpot, 100);
-        setInterval(generateFakeWinners, 300000); // Reset nama pemenang tiap 5 menit
+        setInterval(generateFakeWinners, 300000);
     </script>
 </body>
 </html>
