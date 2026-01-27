@@ -52,11 +52,11 @@ body::before {
     transform: translateY(-3px) scale(1.02);
 }
 
-/* MARQUEE PEMENANG - INI YANG TADI HILANG */
+/* MARQUEE PEMENANG */
 .animate-marquee {
     display: inline-block;
     padding-left: 100%;
-    white-space: nowrap; /* Penting agar teks tidak turun ke bawah */
+    white-space: nowrap;
     animation: marquee 30s linear infinite;
 }
 
@@ -64,6 +64,32 @@ body::before {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
+
+/* --- TAMBAHAN KHUSUS: LANGUAGE SWITCHER STYLE --- */
+/* Agar tombol bahasa terlihat rapi dan premium */
+#btn-en, #btn-tl {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 35px;
+    text-align: center;
+}
+
+#btn-en.text-yellow-500, #btn-tl.text-yellow-500 {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Mobile Adjustment untuk Navigasi agar tidak tabrakan */
+@media (max-width: 640px) {
+    nav .flex.items-center.gap-4 {
+        gap: 0.5rem;
+    }
+    .glow-button {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 0.75rem;
+    }
+}
+/* --- END TAMBAHAN --- */
 
 /* Responsive Game Cards Landing Page */
 .img-container {
@@ -103,7 +129,7 @@ body::before {
 /* --- OPTIMASI HALAMAN GAMES.HTML (3 KOLOM MOBILE) --- */
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Gambar jadi pas, tidak raksasa */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 12px;
 }
