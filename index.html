@@ -9,159 +9,125 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://pinoy365.net.ph/" />
-    
-    <style>
-        /* Override untuk tema Putih & Teks Hitam Terang */
-        body {
-            background: #ffffff !important;
-            color: #1a1a1a !important;
-        }
-        .text-gray-200, .text-gray-300, .text-gray-400 {
-            color: #2d2d2d !important; /* Hitam terang/abu gelap agar kontras tinggi */
-        }
-        .bg-black, .bg-zinc-950, .bg-zinc-900 {
-            background-color: #f8f9fa !important; /* Abu-abu sangat muda untuk section */
-            border-color: #e9ecef !important;
-        }
-        nav {
-            background-color: #ffffff !important;
-            border-bottom: 2px solid #ffd700 !important;
-        }
-        .gold-text {
-            background: none !important;
-            -webkit-text-fill-color: #b8860b !important; /* Warna emas gelap agar terbaca di background putih */
-            color: #b8860b !important;
-            font-weight: 900;
-        }
-        footer {
-            background-color: #f1f3f5 !important;
-            border-top: 2px solid #ffd700 !important;
-        }
-        /* Tombol tetap kontras tinggi */
-        .bg-yellow-500 {
-            background-color: #ffcc00 !important;
-            color: #000000 !important;
-        }
-    </style>
 </head>
-<body class="font-sans selection:bg-yellow-200 selection:text-black">
+<body class="bg-black text-gray-200 font-sans selection:bg-yellow-500 selection:text-black">
 
-    <nav class="fixed w-full z-50 top-0 backdrop-blur-md py-4 px-6 shadow-md">
+    <nav class="fixed w-full z-50 top-0 bg-black/80 border-b border-yellow-500/20 backdrop-blur-lg py-4 px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html">
-                <img src="images/logo-utama.webp" alt="Pinoy365 Official Logo" class="h-12 w-auto" loading="eager">
+                <img src="images/logo-utama.webp" alt="Pinoy365 Official Logo" class="h-10 md:h-12 w-auto" loading="eager">
             </a>
             <div class="flex gap-4">
-                <a href="#register" class="bg-yellow-500 text-black font-black px-6 py-2 rounded-full uppercase text-xs shadow-lg hover:scale-105 transition-all">Register</a>
+                <a href="https://linkagent01.pinoy365.bet/register.html" class="bg-yellow-500 text-black font-black px-6 py-2 rounded-full uppercase text-xs shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:scale-105 transition-all">Register</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="pt-32 pb-20 px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-black italic uppercase leading-none mb-6">
+        <section class="pt-32 pb-20 px-6 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-900/20 via-black to-black -z-10"></div>
+            
+            <h1 class="text-5xl md:text-8xl font-black italic uppercase leading-none mb-6">
                 <span class="gold-text">PINOY365</span><br>
-                <span class="text-black">THE #1 LEGIT GAMING APP</span>
+                <span class="text-white drop-shadow-md">SMASH THE JACKPOT!</span>
             </h1>
-            <p class="text-xl md:text-2xl font-bold text-gray-700 mb-10 max-w-3xl mx-auto uppercase tracking-tighter">
-                Win Bigger, Cash Out Faster via GCash & Maya. Join the Elite Filipino Players Today!
+            <p class="text-xl md:text-2xl font-bold text-gray-400 mb-10 max-w-3xl mx-auto uppercase tracking-tighter">
+                The #1 Legit Gaming App in the Philippines. Higher RTP, Fast Payouts via GCash & Maya.
             </p>
             
-            <div class="mb-12 inline-block bg-white border-4 border-yellow-500 p-6 rounded-3xl shadow-2xl">
-                <p class="text-xs font-black text-gray-500 uppercase tracking-widest mb-2">Current Total Jackpot</p>
-                <div id="jackpot" class="text-4xl md:text-6xl font-black text-red-600 tracking-tighter">₱ 88,245,712.00</div>
+            <div class="mb-12 inline-block bg-zinc-900/80 border-2 border-yellow-500/50 p-6 md:p-8 rounded-[40px] shadow-2xl backdrop-blur-md">
+                <p class="text-xs font-black text-yellow-500 uppercase tracking-[0.3em] mb-3">CURRENT TOTAL JACKPOT</p>
+                <div id="jackpot" class="text-4xl md:text-7xl font-black text-white tracking-tighter drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">₱ 88,245,712.00</div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="https://your-affiliate-link.com" class="bg-red-600 text-white text-2xl font-black px-12 py-5 rounded-2xl shadow-xl hover:bg-red-700 transition-all uppercase italic">Login Now</a>
-                <a href="https://your-affiliate-link.com" class="bg-yellow-500 text-black text-2xl font-black px-12 py-5 rounded-2xl shadow-xl hover:bg-yellow-400 transition-all uppercase italic">Register Free</a>
+                <a href="https://linkagent01.pinoy365.bet/register.html" class="bg-red-600 text-white text-2xl font-black px-12 py-5 rounded-2xl shadow-[0_10px_30px_rgba(220,38,38,0.4)] hover:bg-red-700 transition-all uppercase italic">Login Now</a>
+                <a href="https://linkagent01.pinoy365.bet/register.html" class="bg-yellow-500 text-black text-2xl font-black px-12 py-5 rounded-2xl shadow-[0_10px_30px_rgba(234,179,8,0.4)] hover:bg-yellow-400 transition-all uppercase italic border-b-4 border-yellow-700">Register Free</a>
             </div>
         </section>
 
-        <div class="bg-yellow-500 py-3 overflow-hidden border-y-2 border-black">
-            <div id="winner-marquee" class="whitespace-nowrap font-black uppercase italic text-black text-sm">
+        <div class="bg-yellow-500 py-2 border-y border-black overflow-hidden">
+            <div id="winner-marquee" class="whitespace-nowrap font-black uppercase italic text-black text-xs tracking-widest animate-marquee">
                 </div>
         </div>
 
         <section class="max-w-6xl mx-auto px-6 py-20">
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="grid md:grid-cols-2 gap-16 border-t border-white/5 pt-16">
                 <article class="space-y-6">
-                    <h2 class="text-3xl font-black uppercase italic border-l-8 border-yellow-500 pl-4 text-black">Why Choose Pinoy365 App?</h2>
-                    <p class="text-gray-800 leading-relaxed">
-                        <strong>Pinoy365</strong> is the ultimate destination for Filipino gaming enthusiasts. As the most trusted <strong>Pinoy365 login</strong> portal, we offer an unparalleled collection of JILI slots, PG Soft, and live casino experiences. Our platform is fully optimized for mobile devices, ensuring a lag-free experience when you <strong>register</strong> and play.
+                    <h2 class="text-3xl font-black text-yellow-500 uppercase italic">Why Pinoy365 App is #1?</h2>
+                    <p class="text-gray-400 leading-relaxed text-justify">
+                        <strong>Pinoy365</strong> stands out as the leader for Filipino players. This is not just because of graphics, but the <strong>security and fairness</strong> we provide. Our <strong>Pinoy365 app</strong> uses SSL encryption, ensuring every <strong>login</strong> session is protected.
                     </p>
-                    <p class="text-gray-800">
-                        Security is our priority. With our <strong>Pinoy365 app</strong>, your withdrawals are processed instantly through GCash and Maya, making us the fastest paying casino in the Philippines for 2026.
-                    </p>
+                    <h3 class="text-white font-bold text-xl uppercase italic">Fast Registration</h3>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><span class="text-yellow-500">✔</span> Click <strong>Register</strong> button.</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-500">✔</span> Link <strong>GCash or Maya</strong>.</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-500">✔</span> Perform <strong>Pinoy365 login</strong> to play.</li>
+                    </ul>
                 </article>
 
                 <article class="space-y-6">
-                    <h2 class="text-3xl font-black uppercase italic border-l-8 border-red-600 pl-4 text-black">Bakit Pinoy365 ang Pinakamahusay?</h2>
-                    <p class="text-gray-800 leading-relaxed">
-                        Ang <strong>Pinoy365 app</strong> ay ang nangungunang platform sa Pilipinas. Dito, garantisadong safe ang inyong <strong>Pinoy365 login</strong> at mabilis ang payout sa GCash at Maya. Maraming mapagpipiliang games gaya ng JILI slots at Sabong.
+                    <h2 class="text-3xl font-black text-red-600 uppercase italic">Mabilis at Secured na Payout</h2>
+                    <p class="text-gray-400 leading-relaxed text-justify">
+                        Ang JILI slots at PG Soft games ay may RTP na 98.5%. Sa <strong>Pinoy365 app</strong>, garantisado ang iyong panalo. Integrated ang aming system sa <strong>GCash</strong> para sa mabilis na cash-out.
                     </p>
-                    <p class="text-gray-800">
-                        Huwag nang mag-atubili! Mag-<strong>register</strong> na sa Pinoy365 at maranasan ang pinaka-gacor na gaming experience ngayong taon. Panalo ang bawat Pinoy dito!
+                    <h3 class="text-white font-bold text-xl uppercase italic">Bakit Kami Pinagkakatiwalaan?</h3>
+                    <p class="text-gray-500 text-sm italic">
+                        "Higit sa 1 milyong Pinoy na ang gumagamit ng Pinoy365 register para manalo araw-araw."
                     </p>
                 </article>
             </div>
         </section>
 
-        <section class="bg-gray-50 py-20 px-6">
-            <h2 class="text-center text-4xl font-black uppercase italic mb-12 text-black underline decoration-yellow-500">Popular Games</h2>
+        <section class="bg-zinc-950 py-20 px-6">
+            <h2 class="text-center text-4xl font-black uppercase italic mb-12 text-white">Popular <span class="text-yellow-500">Games</span></h2>
             <div class="games-grid max-w-7xl mx-auto">
-                <div class="game-item-v2 bg-white shadow-md">
-                    <img src="images/jili-slots.webp" alt="Jili Slots Pinoy365" loading="lazy">
-                    <p class="game-title-v2 text-black font-bold mt-2">JILI SLOTS</p>
+                <div class="game-item-v2 group">
+                    <img src="images/jili-slots.webp" alt="Jili Slots Pinoy365" class="group-hover:scale-110 transition-transform" loading="lazy">
+                    <p class="text-center font-bold text-[10px] mt-2 text-yellow-500">JILI SLOTS</p>
                 </div>
-                <div class="game-item-v2 bg-white shadow-md">
-                    <img src="images/sabong.webp" alt="Live Sabong Pinoy365" loading="lazy">
-                    <p class="game-title-v2 text-black font-bold mt-2">LIVE SABONG</p>
+                <div class="game-item-v2 group">
+                    <img src="images/sabong.webp" alt="Live Sabong Pinoy365" class="group-hover:scale-110 transition-transform" loading="lazy">
+                    <p class="text-center font-bold text-[10px] mt-2 text-yellow-500">LIVE SABONG</p>
                 </div>
-                <div class="game-item-v2 bg-white shadow-md">
-                    <img src="images/fc-slots.webp" alt="FC Slots Pinoy365" loading="lazy">
-                    <p class="game-title-v2 text-black font-bold mt-2">FC SLOTS</p>
+                <div class="game-item-v2 group">
+                    <img src="images/fc-slots.webp" alt="FC Slots Pinoy365" class="group-hover:scale-110 transition-transform" loading="lazy">
+                    <p class="text-center font-bold text-[10px] mt-2 text-yellow-500">FC SLOTS</p>
                 </div>
-                </div>
-        </section>
-
-        <section class="py-12 border-t border-gray-200">
-            <div class="flex flex-wrap justify-center gap-10 opacity-80 grayscale hover:grayscale-0 transition-all">
-                <img src="images/logo-gcash.png" alt="GCash Pinoy365" class="h-8" loading="lazy">
-                <img src="images/logo-maya.png" alt="Maya Pinoy365" class="h-8" loading="lazy">
-                <img src="images/logo-jili.png" alt="Jili Games" class="h-8" loading="lazy">
             </div>
         </section>
     </main>
 
-    <footer class="py-16 px-6 text-center">
-        <div class="flex flex-wrap justify-center gap-8 mb-10 text-xs font-black uppercase tracking-widest text-gray-600">
-            <a href="about.html" class="hover:text-yellow-600">About Us</a>
-            <a href="terms.html" class="hover:text-yellow-600">Terms & Conditions</a>
-            <a href="privacy.html" class="hover:text-yellow-600">Privacy Policy</a>
-            <a href="https://direct.lc.chat/19427782" class="hover:text-yellow-600">Contact 24/7</a>
+    <footer class="bg-black py-16 px-6 border-t border-yellow-500/10 text-center">
+        <div class="flex flex-wrap justify-center gap-8 mb-10 text-[10px] font-black uppercase tracking-widest text-gray-500">
+            <a href="about.html" class="hover:text-yellow-500 transition-colors">About Us</a>
+            <a href="terms.html" class="hover:text-yellow-500 transition-colors">Terms & Conditions</a>
+            <a href="privacy.html" class="hover:text-yellow-500 transition-colors">Privacy Policy</a>
+            <a href="https://direct.lc.chat/19427782" class="hover:text-yellow-500 transition-colors">Contact 24/7</a>
         </div>
-        <p class="text-[11px] text-gray-500 max-w-3xl mx-auto mb-6 leading-relaxed">
-            Disclaimer: Pinoy365 is for 18+ only. Play responsibly. All <strong>Pinoy365 login</strong> activities are secured with high-level encryption for your protection.
+        <p class="text-[9px] text-gray-700 max-w-3xl mx-auto mb-6 leading-loose uppercase">
+            Disclaimer: 18+ Only. Play responsibly. Pinoy365 is encrypted under the Data Privacy Act.
         </p>
-        <p class="text-black font-black text-xl italic tracking-widest">PINOY365 &copy; 2026</p>
+        <p class="text-yellow-500 font-bold text-lg italic tracking-widest">PINOY365 &copy; 2026</p>
     </footer>
 
     <script>
+        // Smooth Jackpot Animation
         let currentJackpot = 88245712.00;
         function updateJackpot() {
-            currentJackpot += Math.random() * 5.50;
+            currentJackpot += Math.random() * 12.50;
             document.getElementById('jackpot').innerText = '₱ ' + currentJackpot.toLocaleString('en-US', { minimumFractionDigits: 2 });
         }
-        setInterval(updateJackpot, 100);
+        setInterval(updateJackpot, 80);
 
+        // Winner Generator
         function generateWinners() {
-            const names = ['Juan', 'Maria', 'Santy', 'Rex', 'Lodi', 'Pau', 'Miko', 'Chard'];
-            let text = "🔥 LATEST WINNERS: ";
-            for (let i = 0; i < 10; i++) {
-                text += `${names[Math.floor(Math.random()*names.length)]} won ₱${(Math.random()*5000).toFixed(2)} | `;
+            const names = ['Juan', 'Maria', 'Santy', 'Rex', 'Lodi', 'Pau', 'Miko', 'Chard', 'Bossing', 'Aling'];
+            let text = "";
+            for (let i = 0; i < 15; i++) {
+                text += `🔥 ${names[Math.floor(Math.random()*names.length)]}*** won ₱${(Math.random()*8000 + 200).toFixed(2)} | `;
             }
-            document.getElementById('winner-marquee').innerText = text;
+            document.getElementById('winner-marquee').innerText = text + text;
         }
         generateWinners();
     </script>
