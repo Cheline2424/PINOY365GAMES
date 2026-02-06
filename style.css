@@ -1,137 +1,91 @@
-/* style.css - PINOY365 Optimized Version 2026 */
+/* style.css - PINOY365 ULTRA OPTIMIZED 2026 
+   Focus: Performance 90+, Mobile First, SEO Visibility
+*/
 
 :root {
     --gold: #FFD700;
     --gold-light: #FFFACD;
     --gold-dark: #B8860B;
+    --bg-dark: #0a0a0a;
+    --accent-red: #ff0000;
 }
 
+/* 1. OPTIMASI PERFORMANCE: Gunakan system font sebagai fallback agar tidak render-blocking */
 body {
-    background: radial-gradient(circle at center, #3d0202 0%, #1a0101 50%, #000000 100%);
-    background-attachment: fixed;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    background-color: var(--bg-dark);
+    background: radial-gradient(circle at center, #2d0101 0%, #000000 100%);
+    color: #ffffff;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     margin: 0;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
-    opacity: 0.15; z-index: -1; pointer-events: none;
+/* 2. SEO & ACCESSIBILITY: Pastikan kontras teks tinggi agar mudah dibaca Google Crawler */
+p {
+    color: #d1d1d1;
+    font-size: 1rem;
 }
 
-/* SEO & Performance Friendly Shine */
+strong {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* 3. SHINE EFFECT (Optimized: No heavy JS) */
 .gold-text {
     background: linear-gradient(to right, var(--gold) 20%, var(--gold-light) 50%, var(--gold) 80%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 3s linear infinite;
-    font-family: 'Oswald', sans-serif;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+    animation: shine 4s linear infinite;
+    font-weight: 900;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
 }
 
 @keyframes shine { to { background-position: 200% center; } }
 
-/* Button Optimization */
+/* 4. TOMBOL STRATEGIS (Conversion Rate Optimization) */
 .glow-button {
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    color: #000 !important;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .glow-button:hover {
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
-    transform: translateY(-3px) scale(1.02);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
 }
 
-/* MARQUEE PEMENANG */
-.animate-marquee {
-    display: inline-block;
-    padding-left: 100%;
-    white-space: nowrap;
-    animation: marquee 30s linear infinite;
+/* 5. ARTIKEL SEO STYLING (Menjaga kebersihan teks panjang) */
+article h2, article h3 {
+    margin-top: 2rem;
+    line-height: 1.2;
 }
 
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+article p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
-/* --- TAMBAHAN KHUSUS: LANGUAGE SWITCHER STYLE --- */
-/* Agar tombol bahasa terlihat rapi dan premium */
-#btn-en, #btn-tl {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    min-width: 35px;
-    text-align: center;
+/* 6. IMAGE OPTIMIZATION (Prevent Layout Shift) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    content-visibility: auto; /* Membantu performa scroll */
 }
 
-#btn-en.text-yellow-500, #btn-tl.text-yellow-500 {
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
-}
-
-/* Mobile Adjustment untuk Navigasi agar tidak tabrakan */
-@media (max-width: 640px) {
-    nav .flex.items-center.gap-4 {
-        gap: 0.5rem;
-    }
-    .glow-button {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        font-size: 0.75rem;
-    }
-}
-/* --- END TAMBAHAN --- */
-
-/* Responsive Game Cards Landing Page */
-.img-container {
-    width: 100%;
-    height: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-@media (min-width: 768px) {
-    .img-container { height: 180px; }
-}
-
-.img-container img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
-}
-
-.game-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 215, 0, 0.1);
-    padding: 15px;
-    border-radius: 20px;
-    transition: all 0.4s ease;
-}
-
-.game-card:hover {
-    background: rgba(255, 215, 0, 0.08);
-    border-color: var(--gold);
-    transform: translateY(-8px);
-}
-
-/* --- OPTIMASI HALAMAN GAMES.HTML (3 KOLOM MOBILE) --- */
+/* 7. GAMES GRID (Mobile-First 3 Column) */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 12px;
+    gap: 8px;
+    padding: 10px;
 }
 
 @media (min-width: 768px) {
@@ -142,54 +96,55 @@ body::before {
 }
 
 .game-item-v2 {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 215, 0, 0.1);
     border-radius: 12px;
-    padding: 8px;
-    text-align: center;
+    padding: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.game-item-v2:hover {
+    border-color: var(--gold);
 }
 
 .game-item-v2 img {
-    width: 100%;
     border-radius: 8px;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
 
-.game-title-v2 {
-    font-size: 0.6rem;
-    font-weight: 900;
+/* 8. MARQUEE & JACKPOT (Ringan & Cepat) */
+.animate-marquee {
+    will-change: transform; /* Memberitahu browser untuk optimasi hardware */
+}
+
+#jackpot {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    letter-spacing: -2px;
+}
+
+/* 9. FOOTER LEGAL LINKS */
+footer a {
+    transition: color 0.2s;
+}
+
+footer a:hover {
     color: var(--gold);
-    text-transform: uppercase;
-    margin: 5px 0 2px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    text-decoration: underline;
 }
 
-.jackpot-tag {
-    color: #00ff00;
-    font-size: 0.5rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+/* 10. ANIMASI TERKONTROL (Agar tidak membebani CPU Mobile) */
+.float-anim {
+    animation: floating 5s ease-in-out infinite;
 }
 
-.play-btn-v2 {
-    display: block;
-    background: linear-gradient(to bottom, var(--gold), var(--gold-dark));
-    color: black !important;
-    font-size: 0.6rem;
-    font-weight: 900;
-    padding: 5px 0;
-    border-radius: 4px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-/* Animations */
-.float-anim { animation: floating 6s ease-in-out infinite; }
 @keyframes floating {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Tambahan: Sembunyikan elemen dekoratif di mobile untuk kecepatan */
+@media (max-width: 480px) {
+    .hide-on-mobile { display: none; }
+    h2 { font-size: 2.5rem !important; }
 }
