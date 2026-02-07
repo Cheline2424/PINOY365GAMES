@@ -37,7 +37,7 @@
 
     <div class="fixed top-0 w-full z-[60] bg-red-600 text-white py-1 overflow-hidden whitespace-nowrap text-[10px] font-bold uppercase tracking-widest border-b border-yellow-500">
         <div id="dynamic-marquee" class="animate-marquee inline-block">
-            🔥 LOADING LATEST WINNERS FROM PINOY365 SERVER... 🔥
+            🔥 WELCOME TO PINOY365 - THE #1 TRUSTED ONLINE CASINO & SLOTS IN THE PHILIPPINES 2026 🔥
         </div>
     </div>
 
@@ -53,10 +53,12 @@
                     <button onclick="changeLang('tl')" id="btn-tl" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all text-gray-500">TL</button>
                 </div>
 
-                <div class="hidden md:flex gap-6 text-xs font-black uppercase italic text-yellow-500">
-                    <a href="games.html" class="hover:text-white transition">60 Hot Games</a>
-                    <a href="https://linkagent01.pinoy365.bet/register.html" class="hover:text-white transition">Live Casino</a>
-                </div>
+            <div class="hidden md:flex gap-6 text-xs font-black uppercase italic text-yellow-500">
+                <a href="games.html" class="hover:text-white transition">60 Hot Games</a>
+                <a href="deposit.html" class="hover:text-white transition">Deposit</a>
+                <a href="withdraw.html" class="hover:text-white transition">Withdraw</a>
+                <a href="download.html" class="hover:text-white transition">Download App</a>
+            </div>
                 
                 <a href="https://linkagent01.pinoy365.bet/register.html" data-lang="btn_reg" class="bg-gradient-to-r from-yellow-400 via-yellow-100 to-yellow-500 text-black font-black px-6 py-2 rounded-full text-sm glow-button uppercase">
                     Register Now
@@ -77,6 +79,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="https://linkagent01.pinoy365.bet/register.html" data-lang="btn_play" class="bg-yellow-500 text-black px-12 py-5 rounded-xl font-black text-2xl glow-button uppercase italic hover:scale-105 transition-all inline-block">Play Now 🎰</a>
+                    <a href="download.html" class="bg-white text-black px-12 py-5 rounded-xl font-black text-2xl uppercase italic hover:scale-105 transition-all inline-block">Download App 📱</a>
                 </div>
             </div>
             <div class="relative group">
@@ -223,6 +226,9 @@
             <h4 class="text-yellow-500 font-black uppercase tracking-widest mb-4 border-b border-yellow-500/20 inline-block pb-1">More Pages</h4>
             <div class="flex flex-col space-y-2 text-[11px] font-bold uppercase">
                 <a href="index.html" class="text-gray-400 hover:text-yellow-500 transition">Pinoy365 Home</a>
+                <a href="deposit.html" class="text-yellow-500 hover:text-white transition">How to Deposit</a>
+                <a href="withdraw.html" class="text-yellow-500 hover:text-white transition">How to Withdraw</a>
+                <a href="download.html" class="text-yellow-500 hover:text-white transition">Download App</a>
                 <a href="#about-us" class="text-gray-400 hover:text-yellow-500 transition">About Us</a>
                 <a href="https://direct.lc.chat/19427782" class="text-gray-400 hover:text-yellow-500 transition">Contact Us</a>
                 <a href="privacy.html" class="text-gray-400 hover:text-yellow-500 transition">Privacy Policy</a>
@@ -333,18 +339,7 @@
         }
         setInterval(updateJackpot, 1000);
 
-        function generateFakeWinners() {
-            const names = ['Juan', 'Maria', 'Santy', 'Rex', 'Lodi', 'Pau', 'Miko', 'Chard', 'Kiko', 'Elena'];
-            let marqueeText = "🔥 LATEST WINNERS: ";
-            for (let i = 0; i < 15; i++) {
-                let rName = names[Math.floor(Math.random() * names.length)];
-                let rWin = (Math.random() * 50000 + 500).toLocaleString(undefined, {maximumFractionDigits:0});
-                marqueeText += ` [${rName}***] won ₱${rWin} | `;
-            }
-            document.getElementById('dynamic-marquee').innerText = marqueeText;
-        }
-        generateFakeWinners();
-        setInterval(generateFakeWinners, 300000);
+    
     </script>
 </body>
 </html>
