@@ -17,6 +17,8 @@
     <meta property="og:url" content="https://pinoy365-games.onrender.com/">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
@@ -43,14 +45,14 @@
 
     <nav class="fixed w-full z-50 top-6 py-4 px-6 bg-black/80 border-b border-yellow-500/30 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="block">
-                <img src="images/logo-utama.webp" alt="PINOY365 Logo" class="h-10 md:h-14 w-auto object-contain hover:scale-105 transition-transform">
+            <a href="index.html" class="block" aria-label="PINOY365 Home">
+                <img src="images/logo-utama.webp" alt="PINOY365 Official Logo Philippines" class="h-10 md:h-14 w-auto object-contain hover:scale-105 transition-transform">
             </a>
             
             <div class="flex items-center gap-4">
                 <div class="flex items-center bg-zinc-900 rounded-full p-1 border border-yellow-500/30">
-                    <button onclick="changeLang('en')" id="btn-en" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all text-yellow-500 bg-zinc-800">EN</button>
-                    <button onclick="changeLang('tl')" id="btn-tl" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all text-gray-500">TL</button>
+                    <button onclick="changeLang('en')" id="btn-en" aria-label="Switch to English" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all text-yellow-500 bg-zinc-800">EN</button>
+                    <button onclick="changeLang('tl')" id="btn-tl" aria-label="Switch to Tagalog" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all text-gray-500">TL</button>
                 </div>
 
             <div class="hidden md:flex gap-6 text-xs font-black uppercase italic text-yellow-500">
@@ -84,7 +86,7 @@
             </div>
             <div class="relative group">
                 <div class="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full group-hover:bg-yellow-500/40 transition duration-700"></div>
-                <img src="images/hero-pinoy.webp" alt="Pinoy365 Best Online Casino" width="600" height="600" class="relative z-20 w-full max-w-[600px] mx-auto float-anim filter drop-shadow-[0_35px_35px_rgba(255,215,0,0.3)]">
+                <img src="images/hero-pinoy.webp" alt="PINOY365 Smash The Jackpot Online Casino" width="600" height="600" class="relative z-20 w-full max-w-[600px] mx-auto float-anim filter drop-shadow-[0_35px_35px_rgba(255,215,0,0.3)]">
             </div>
         </div>
     </main>
@@ -92,7 +94,7 @@
     <section class="py-10 bg-zinc-950 border-y border-yellow-500/20 text-center">
         <h3 class="text-yellow-500 font-black italic uppercase tracking-widest mb-2 text-sm">Global Progressive Jackpot</h3>
         <div class="text-5xl md:text-7xl font-black gold-text italic tracking-tighter" id="jackpot">₱ 88,245,712.00</div>
-        <p class="text-gray-500 text-[10px] mt-2 uppercase tracking-widest">Real-time update from international servers</p>
+        <p class="text-gray-400 text-[10px] mt-2 uppercase tracking-widest">Real-time update from international servers</p>
     </section>
 
     <section class="py-16 px-6 bg-gradient-to-b from-black to-zinc-900">
@@ -101,7 +103,7 @@
             <div class="text-center py-6">
                 <h3 class="text-4xl md:text-5xl font-black gold-text italic uppercase mb-4">60 HOT GAMES <br> THIS WEEK!</h3>
                 <p class="text-yellow-500 mb-6 uppercase font-bold tracking-widest text-sm">JILI • PG SOFT • PRAGMATIC • FA CHAI</p>
-                <div class="text-gray-400 mb-8 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                <div class="text-gray-300 mb-8 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
                     <p class="mb-4">Huwag pahuhuli sa agos ng panalo! Pinoy365 curated a special list of 60 high-performance games meticulously tested for their payout frequency. Whether you prefer the classic Asian themes of JILI or the high-octane visual storytelling of PG Soft, our platform ensures every spin counts.</p>
                     <p>Our algorithm tracks real-time win rates to provide you with a daily updated "Hot List". Currently, games like <em>Super Ace</em> and <em>Gates of Olympus</em> are showing record-breaking multipliers of up to 5000x!</p>
                 </div>
@@ -119,28 +121,30 @@
                        Download App
                     </a>
                 </div>
+            </div>
+        </div>
     </section>
 
     <section class="py-24 px-6 bg-gradient-to-b from-zinc-950 to-black">
         <div class="max-w-7xl mx-auto text-center">
-            <h3 data-lang="stats_main_title" class="text-4xl md:text-6xl font-black gold-text uppercase mb-12 italic leading-none">
+            <h2 data-lang="stats_main_title" class="text-4xl md:text-6xl font-black gold-text uppercase mb-12 italic leading-none">
                 1M+ Players Already Won!
-            </h3>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-8 rounded-3xl bg-black/50 border border-yellow-500/20">
                     <div class="text-5xl font-black text-white mb-2">1,000,000+</div>
                     <p data-lang="stat1_title" class="text-yellow-500 font-bold uppercase tracking-widest text-sm">Active Members</p>
-                    <p data-lang="stat1_desc" class="text-gray-400 mt-4 text-sm leading-relaxed">Join a massive community of Filipino winners. Our active player base ensures a steady growth of progressive jackpots and 24/7 lobby activity.</p>
+                    <p data-lang="stat1_desc" class="text-gray-300 mt-4 text-sm leading-relaxed">Join a massive community of Filipino winners. Our active player base ensures a steady growth of progressive jackpots and 24/7 lobby activity.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-black/50 border border-yellow-500/20">
                     <div class="text-5xl font-black text-white mb-2">98.5%</div>
                     <p data-lang="stat2_title" class="text-yellow-500 font-bold uppercase tracking-widest text-sm">Win Rate RTP</p>
-                    <p data-lang="stat2_desc" class="text-gray-400 mt-4 text-sm leading-relaxed">Our games utilize certified Random Number Generators (RNG) with the highest industry-standard Return to Player (RTP) percentages in the Philippines.</p>
+                    <p data-lang="stat2_desc" class="text-gray-300 mt-4 text-sm leading-relaxed">Our games utilize certified Random Number Generators (RNG) with the highest industry-standard Return to Player (RTP) percentages in the Philippines.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-black/50 border border-yellow-500/20">
                     <div class="text-5xl font-black text-white mb-2">&lt; 2 MINS</div>
                     <p data-lang="stat3_title" class="text-yellow-500 font-bold uppercase tracking-widest text-sm">Fast Withdrawal</p>
-                    <p data-lang="stat3_desc" class="text-gray-400 mt-4 text-sm leading-relaxed">Our automated payout system processes GCash and Maya transactions instantly. Spend less time waiting and more time enjoying your hard-earned winnings.</p>
+                    <p data-lang="stat3_desc" class="text-gray-300 mt-4 text-sm leading-relaxed">Our automated payout system processes GCash and Maya transactions instantly. Spend less time waiting and more time enjoying your hard-earned winnings.</p>
                 </div>
             </div>
         </div>
@@ -150,12 +154,12 @@
         <div class="max-w-5xl mx-auto">
             <div class="mb-16 text-center">
                 <h2 data-lang="seo_title" class="gold-text text-3xl md:text-5xl font-black italic mb-8 uppercase">Pinoy365: The #1 Trusted Online Gaming Hub in the PH</h2>
-                <div class="text-gray-300 space-y-6 text-justify leading-relaxed">
+                <div class="text-gray-200 space-y-6 text-justify leading-relaxed">
                     <p data-lang="seo_p1">
                         Welcome sa Pinoy365, ang pinakasikat at pinaka-legit na online gaming platform sa Pilipinas ngayong 2026. Kami ay nagbibigay ng platform na hindi lamang masaya kundi pati na rin secured. Gamit ang pinakabagong encryption technology, ang inyong mga data at transaksyon ay laging protektado. Dito, mas madaling manalo dahil sa aming mataas na RTP (Return to Player) sa lahat ng aming JILI slots, PG Soft, at Pragmatic Play games. Ang aming layunin ay magbigay ng world-class na karanasan sa bawat Pilipino saan mang panig ng mundo.
                     </p>
                     <p data-lang="seo_p2">
-                        Bakit marami ang lumilipat sa Pinoy365? Dahil kami ay nag-aalok ng instant GCash and Maya withdrawals. Sa loob lang ng ilang minuto, ang iyong napanalunan ay diretso na sa iyong bulsa! Hindi na kailangan maghintay ng matagal. Kami rin ay lisensyado ng mga international gaming authorities, kaya makakasiguro kayo na ang bawat laro ay patas (fair play). Sali na sa aming lumalaking komunidad at simulan ang inyong swerte ngayon!
+                        Bakit marami ang lumilipat sa Pinoy365? Dahil kami ay nag-aalok ng instant GCash and Maya withdrawals. Sa loob lang ng ilang minuto, ang iyong napanalunan ay diretso na sa iyong bulsa! Hindi na kailangan maghintay ng matagal. Kami rin ay lisensyado ng mga international gaming authorities, kaya makakasiguro kalian na ang bawat laro ay patas (fair play). Sali na sa aming lumalaking komunidad at simulan ang inyong swerte ngayon!
                     </p>
                 </div>
             </div>
@@ -163,17 +167,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
                 <div class="bg-black/40 p-8 rounded-3xl border border-yellow-500/10 transition hover:border-yellow-500/40">
                     <h3 data-lang="feature1_title" class="text-yellow-500 font-bold text-xl mb-4 uppercase italic">🎰 Best Slot Games Selection</h3>
-                    <p data-lang="feature1_desc" class="text-gray-400 text-sm leading-relaxed">Mula sa makulay na graphics ng JILI Slots hanggang sa sikat na 'Fishing Games' ng Fa Chai, mayroon kaming mahigit 1,000 titles na pwedeng pagpilian. Ang aming slots ay optimized para sa mobile devices, tinitiyak na swabe ang laro kahit sa mabagal na internet connection.</p>
+                    <p data-lang="feature1_desc" class="text-gray-300 text-sm leading-relaxed">Mula sa makulay na graphics ng JILI Slots hingga sa sikat na 'Fishing Games' ng Fa Chai, mayroon kaming mahigit 1,000 titles na pwedeng pagpilian. Ang aming slots ay optimized para sa mobile devices, tinitiyak na swabe ang laro kahit sa mabagal na internet connection.</p>
                 </div>
                 <div class="bg-black/40 p-8 rounded-3xl border border-yellow-500/10 transition hover:border-yellow-500/40">
                     <h3 data-lang="feature2_title" class="text-yellow-500 font-bold text-xl mb-4 uppercase italic">🐓 Live Sabong & Casino</h3>
-                    <p data-lang="feature2_desc" class="text-gray-400 text-sm leading-relaxed">Damhin ang adrenaline ng Live Sabong diretso sa iyong screen. Gamit ang aming Ultra-HD streaming, tila nasa loob ka mismo ng cockpit. Bukod dito, ang aming Live Casino ay nag-aalok ng Baccarat, Roulette, at Blackjack kasama ang aming mga friendly at professional live dealers.</p>
+                    <p data-lang="feature2_desc" class="text-gray-300 text-sm leading-relaxed">Damhin ang adrenaline ng Live Sabong diretso sa iyong screen. Gamit ang aming Ultra-HD streaming, tila nasa loob ka mismo ng cockpit. Bukod dito, ang aming Live Casino ay nag-aalok ng Baccarat, Roulette, at Blackjack kasama ang aming mga friendly at professional live dealers.</p>
                 </div>
             </div>
 
             <div id="about-us" class="mb-16 scroll-mt-32">
                 <h3 class="text-yellow-500 font-black text-2xl mb-6 uppercase">About Pinoy365 Gaming</h3>
-                <div class="text-gray-400 text-sm leading-relaxed space-y-4">
+                <div class="text-gray-300 text-sm leading-relaxed space-y-4">
                     <p>Pinoy365 was founded with a single mission: to redefine the online entertainment landscape in the Philippines. Since our inception, we have grown from a niche platform into a leading powerhouse of digital gaming. Our headquarters, located in the heart of Manila's business district, houses a team of over 500 dedicated professionals, ranging from software engineers to 24/7 customer support specialists.</p>
                     <p>We believe that trust is the foundation of any successful gaming platform. That is why Pinoy365 operates under strict regulatory frameworks and undergoes monthly audits by third-party agencies to verify our payout percentages. Our commitment to innovation is reflected in our proprietary "Fast-Track" payment gateway, which has revolutionized how Filipinos receive their winnings via e-wallets like GCash, Maya, and GrabPay.</p>
                 </div>
@@ -181,7 +185,7 @@
 
             <div id="terms" class="mb-16 scroll-mt-32">
                 <h3 class="text-yellow-500 font-black text-2xl mb-6 uppercase">Terms and Conditions</h3>
-                <div class="text-gray-400 text-sm leading-relaxed space-y-4">
+                <div class="text-gray-300 text-sm leading-relaxed space-y-4">
                     <p>By accessing and playing at Pinoy365, you agree to abide by our strict terms of service designed to protect both the player and the platform. Users must be at least 21 years of age to participate in any real-money games. Account sharing is strictly prohibited, and each player is entitled to only one account per household and IP address to prevent fraudulent activities.</p>
                     <p>All deposits must originate from accounts owned by the registered user. Any discrepancies in name between the Pinoy365 account and the funding source (GCash/Bank) may lead to temporary suspension for verification purposes. Bonuses and promotions come with specific wagering requirements (turnover) that must be met before a withdrawal can be initiated. Pinoy365 reserves the right to modify these terms to comply with local laws and regulations at any time.</p>
                 </div>
@@ -189,7 +193,7 @@
 
             <div id="responsible" class="mb-16 scroll-mt-32">
                 <h3 class="text-yellow-500 font-black text-2xl mb-6 uppercase">Responsible Gaming</h3>
-                <div class="text-gray-400 text-sm leading-relaxed space-y-4">
+                <div class="text-gray-300 text-sm leading-relaxed space-y-4">
                     <p>At Pinoy365, we prioritize the well-being of our community above all else. Gambling should always be viewed as a form of entertainment, not a primary source of income. We provide a suite of "Self-Help" tools including deposit limits, time-out periods, and permanent self-exclusion options for players who feel their gaming habits are becoming problematic.</p>
                     <p>We work closely with organizations like PAGCOR and international responsible gaming bodies to provide resources and counseling for those in need. Our system uses AI-driven monitoring to detect unusual patterns of play, allowing our support team to reach out and offer assistance proactively. Remember: play within your limits, and if the fun stops, stop playing.</p>
                 </div>
@@ -200,15 +204,15 @@
                 <div class="space-y-6">
                     <div class="border-b border-white/10 pb-4">
                         <p data-lang="faq1_q" class="text-yellow-400 font-bold mb-2">Paano mag-register sa Pinoy365?</p>
-                        <p data-lang="faq1_a" class="text-gray-400 text-sm">Madali lang! I-click ang "Register Now" button sa itaas, ilagay ang iyong username, password, at phone number. Pagkatapos, i-bind ang iyong GCash o Maya account sa 'User Center' para sa mabilis na cash-in at cash-out.</p>
+                        <p data-lang="faq1_a" class="text-gray-300 text-sm">Madali lang! I-click ang "Register Now" button sa itaas, ilagay ang iyong username, password, at phone number. Pagkatapos, i-bind ang iyong GCash o Maya account sa 'User Center' para sa mabilis na cash-in at cash-out.</p>
                     </div>
                     <div class="border-b border-white/10 pb-4">
                         <p data-lang="faq2_q" class="text-yellow-400 font-bold mb-2">Safe ba ang aking pera disini?</p>
-                        <p data-lang="faq2_a" class="text-gray-400 text-sm">Siguradong safe, lodi! Ang Pinoy365 ay gumagamit ng 256-bit SSL encryption (katulad ng gamit ng mga bangko). Lahat ng iyong panalo ay naka-imbak sa isang secured wallet hanggang sa i-withdraw mo ito.</p>
+                        <p data-lang="faq2_a" class="text-gray-300 text-sm">Siguradong safe, lodi! Ang Pinoy365 ay gumagamit ng 256-bit SSL encryption (katulad ng gamit ng mga bangko). Lahat ng iyong panalo ay naka-imbak sa isang secured wallet hanggang sa i-withdraw mo ito.</p>
                     </div>
                     <div class="border-b border-white/10 pb-4">
                         <p data-lang="faq3_q" class="text-yellow-400 font-bold mb-2">Anong oras pwedeng mag-withdraw?</p>
-                        <p data-lang="faq3_a" class="text-gray-400 text-sm">Ang aming withdrawal system ay open 24 hours a day, 7 days a week. Kahit holiday o madaling araw, pwedeng-pwede kang mag-cash out basta naabot mo ang minimum withdrawal limit.</p>
+                        <p data-lang="faq3_a" class="text-gray-300 text-sm">Ang aming withdrawal system ay open 24 hours a day, 7 days a week. Kahit holiday o madaling araw, pwedeng-pwede kang mag-cash out basta naabot mo ang minimum withdrawal limit.</p>
                     </div>
                 </div>
             </div>
@@ -217,39 +221,39 @@
 
     <section class="py-16 bg-black/80 border-t border-yellow-500/20">
         <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-10 opacity-40 hover:opacity-100 transition duration-700">
-            <img src="images/logo-pragmatic.png" alt="Pragmatic Play" class="h-8 md:h-12" loading="lazy">
-            <img src="images/logo-pgsoft.png" alt="PG Soft" class="h-8 md:h-12" loading="lazy">
-            <img src="images/logo-jili.png" alt="JILI Games" class="h-8 md:h-12" loading="lazy">
-            <img src="images/logo-microgaming.png" alt="Microgaming" class="h-8 md:h-12" loading="lazy">
-            <img src="images/logo-evolution.png" alt="Evolution Gaming" class="h-8 md:h-12" loading="lazy">
-            <img src="images/logo-fa-chai.png" alt="Fa Chai" class="h-8 md:h-12" loading="lazy">
+            <img src="images/logo-pragmatic.png" alt="Pragmatic Play Official Provider" class="h-8 md:h-12" loading="lazy">
+            <img src="images/logo-pgsoft.png" alt="PG Soft Official Provider" class="h-8 md:h-12" loading="lazy">
+            <img src="images/logo-jili.png" alt="JILI Games Official Provider" class="h-8 md:h-12" loading="lazy">
+            <img src="images/logo-microgaming.png" alt="Microgaming Official Provider" class="h-8 md:h-12" loading="lazy">
+            <img src="images/logo-evolution.png" alt="Evolution Gaming Official Provider" class="h-8 md:h-12" loading="lazy">
+            <img src="images/logo-fa-chai.png" alt="Fa Chai Official Provider" class="h-8 md:h-12" loading="lazy">
         </div>
     </section>
 
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-left mb-16 border-t border-yellow-500/10 pt-10 font-['Montserrat']">
         <div>
             <h4 class="text-yellow-500 font-black uppercase tracking-widest mb-4 border-b border-yellow-500/20 inline-block pb-1">Disclaimer</h4>
-            <p class="text-gray-400 text-[11px] leading-relaxed italic">
+            <p class="text-gray-300 text-[11px] leading-relaxed italic">
                 This website is an affiliate partner, not the official platform. We do not guarantee any game results, and all participation is at your own risk. Please review the official platform's terms and conditions before playing. Gambling can be addictive; please play responsibly.
             </p>
         </div>
         <div>
             <h4 class="text-yellow-500 font-black uppercase tracking-widest mb-4 border-b border-yellow-500/20 inline-block pb-1">More Pages</h4>
             <div class="flex flex-col space-y-2 text-[11px] font-bold uppercase">
-                <a href="index.html" class="text-gray-400 hover:text-yellow-500 transition">Pinoy365 Home</a>
+                <a href="index.html" class="text-gray-300 hover:text-yellow-500 transition">Pinoy365 Home</a>
                 <a href="deposit.html" class="text-yellow-500 hover:text-white transition">How to Deposit</a>
                 <a href="withdraw.html" class="text-yellow-500 hover:text-white transition">How to Withdraw</a>
                 <a href="download.html" class="text-yellow-500 hover:text-white transition">Download App</a>
-                <a href="#about-us" class="text-gray-400 hover:text-yellow-500 transition">About Us</a>
-                <a href="https://direct.lc.chat/19427782" class="text-gray-400 hover:text-yellow-500 transition">Contact Us</a>
-                <a href="privacy.html" class="text-gray-400 hover:text-yellow-500 transition">Privacy Policy</a>
-                <a href="#terms" class="text-gray-400 hover:text-yellow-500 transition">Terms & Condition</a>
+                <a href="#about-us" class="text-gray-300 hover:text-yellow-500 transition">About Us</a>
+                <a href="https://direct.lc.chat/19427782" class="text-gray-300 hover:text-yellow-500 transition">Contact Us</a>
+                <a href="privacy.html" class="text-gray-300 hover:text-yellow-500 transition">Privacy Policy</a>
+                <a href="#terms" class="text-gray-300 hover:text-yellow-500 transition">Terms & Condition</a>
             </div>
         </div>
     </div>
 
     <footer class="py-20 bg-zinc-950 border-t border-yellow-500/20 text-center">
-        <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-xs font-bold uppercase tracking-widest text-gray-400">
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-xs font-bold uppercase tracking-widest text-gray-300">
             <a href="#about-us" class="hover:text-yellow-500 transition">About Us</a>
             <a href="#terms" class="hover:text-yellow-500 transition">Terms and Condition</a>
             <a href="privacy.html" class="hover:text-yellow-500 transition text-yellow-500">Privacy Policy</a>
@@ -258,17 +262,17 @@
             <a href="#terms" class="hover:text-yellow-500 transition">Disclaimer</a>
         </div>
         <div class="flex justify-center gap-10 mb-10 grayscale opacity-60 flex-wrap">
-            <img src="images/pagcor-logo.png" alt="PAGCOR" class="h-10" loading="lazy">
-            <img src="images/gaming-curacao.png" alt="Curacao" class="h-10" loading="lazy">
-            <img src="images/18-plus.png" alt="18+" class="h-10" loading="lazy">
-            <img src="images/responsible-gaming.png" alt="Responsible" class="h-10" loading="lazy">
+            <img src="images/pagcor-logo.png" alt="PAGCOR Licensed Operator" class="h-10" loading="lazy">
+            <img src="images/gaming-curacao.png" alt="Curacao Gaming License" class="h-10" loading="lazy">
+            <img src="images/18-plus.png" alt="Age Restriction 18+" class="h-10" loading="lazy">
+            <img src="images/responsible-gaming.png" alt="Responsible Gaming Support" class="h-10" loading="lazy">
         </div>
         <h2 class="gold-text text-3xl font-black italic mb-6">PINOY365</h2>
-        <p class="max-w-md mx-auto text-gray-600 text-[10px] leading-relaxed mb-6">PINOY365 is a certified offshore gaming operator. All games are conducted fairly and transparently. Play responsibly.</p>
-        <p class="text-gray-600 text-[10px] tracking-[0.3em] font-bold uppercase">&copy; 2026 PINOY 365 GAMING PHILIPPINES.</p>
+        <p class="max-w-md mx-auto text-gray-400 text-[10px] leading-relaxed mb-6">PINOY365 is a certified offshore gaming operator. All games are conducted fairly and transparently. Play responsibly.</p>
+        <p class="text-gray-400 text-[10px] tracking-[0.3em] font-bold uppercase">&copy; 2026 PINOY 365 GAMING PHILIPPINES.</p>
     </footer>
 
-    <a href="https://direct.lc.chat/19427782" target="_blank" class="fixed bottom-6 right-6 z-[100] bg-yellow-500 text-black p-4 rounded-full shadow-lg flex items-center gap-2 font-bold hover:scale-110 transition-transform">
+    <a href="https://direct.lc.chat/19427782" target="_blank" aria-label="Chat with our live support" class="fixed bottom-6 right-6 z-[100] bg-yellow-500 text-black p-4 rounded-full shadow-lg flex items-center gap-2 font-bold hover:scale-110 transition-transform">
         <span>💬 LIVE CHAT</span>
     </a>
 
@@ -314,7 +318,7 @@
                 stat1_title: "Aktibong Miyembro",
                 stat1_desc: "Napatunayan na ng mahigit isang milyong Pinoy ang bilis at daling manalo sa aming platform.",
                 stat2_title: "Win Rate RTP",
-                stat2_desc: "Pinaka-mataas na chance manalo sa JILI Slots at Sabong sa buong Pilipinas dahil sa aming mataas na RTP.",
+                stat2_desc: "Pinaka-mataas na chance manalo sa JILI Slots at Sabong sa buong Pilipinas karena sa aming mataas na RTP.",
                 stat3_title: "Mabilis na Withdrawal",
                 stat3_desc: "Diretso agad sa GCash o Maya mo ang jackpot. Walang paligoy-ligoy, cash out agad!",
                 seo_title: "Pinoy365: Ang #1 Trusted Online Gaming Hub sa PH",
@@ -349,8 +353,6 @@
             document.getElementById('jackpot').innerText = '₱ ' + currentJackpot.toLocaleString('en-US', { minimumFractionDigits: 2 });
         }
         setInterval(updateJackpot, 1000);
-
-    
     </script>
 </body>
 </html>
