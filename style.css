@@ -149,3 +149,23 @@ footer a:hover {
     .hide-on-mobile { display: none; }
     h2 { font-size: 2.5rem !important; }
 }
+
+/* Custom Heading Styles untuk H2 baru */
+h2 {
+    font-size: 1.75rem; /* Ukuran default mobile */
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+/* Custom Heading Styles untuk H2 baru */
+h2 {
+    font-size: 1.75rem; /* Ukuran default mobile */
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2.5rem; /* Ukuran desktop */
+    }
+}
