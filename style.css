@@ -61,10 +61,11 @@ strong {
     box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
 }
 
-/* 5. ARTIKEL SEO STYLING (Menjaga kebersihan teks panjang) */
-article h2, article h3 {
+/* 5. ARTIKEL SEO STYLING */
+article h2, article h3, section h2 {
     margin-top: 2rem;
     line-height: 1.2;
+    color: var(--gold); /* Memastikan H2 baru tetap berwarna emas */
 }
 
 article p {
