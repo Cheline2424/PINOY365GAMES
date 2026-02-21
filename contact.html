@@ -8,28 +8,63 @@
     <title>Contact Us | PINOY365</title>
     <style>body { font-family: 'Montserrat', sans-serif; }</style>
 </head>
-<body class="bg-black text-white text-center py-20 px-5">
-    <h1 class="text-3xl font-black text-yellow-500 mb-10 uppercase tracking-widest">Contact Details</h1>
+<body class="bg-black text-white text-center py-16 px-5">
+
+    <div class="max-w-2xl mx-auto mb-10">
+        <h1 class="text-4xl font-black text-yellow-500 mb-4 uppercase tracking-widest">Customer Support</h1>
+        <p class="text-gray-400 text-lg leading-relaxed">
+            Your satisfaction is our top priority. Whether you have questions about your account, 
+            need help with transactions, or want to learn more about our games, 
+            our professional support team is ready to assist you **24 hours a day, 7 days a week**.
+        </p>
+    </div>
     
     <div class="max-w-md mx-auto space-y-6">
-        <a href="https://t.me/Pinoy365OfficialSupport" class="block p-4 bg-zinc-900 border border-yellow-500/30 rounded-xl hover:bg-zinc-800 transition">
-            <p class="text-sm text-gray-400">Telegram Contact</p>
+        <a href="https://t.me/Pinoy365OfficialSupport" class="block p-5 bg-zinc-900 border border-yellow-500/20 rounded-2xl hover:border-yellow-500 transition-all duration-300">
+            <p class="text-xs text-yellow-500 uppercase tracking-widest mb-1 font-bold">Official Telegram</p>
             <p class="text-xl font-bold">@Pinoy365OfficialSupport</p>
         </a>
 
-        <a href="https://direct.lc.chat/19427782" class="block p-4 bg-zinc-900 border border-yellow-500/30 rounded-xl hover:bg-zinc-800 transition">
-            <p class="text-sm text-gray-400">Live Chat</p>
-            <p class="text-xl font-bold">Start Chat Now</p>
+        <a href="https://direct.lc.chat/19427782" class="block p-5 bg-zinc-900 border border-yellow-500/20 rounded-2xl hover:border-yellow-500 transition-all duration-300">
+            <p class="text-xs text-yellow-500 uppercase tracking-widest mb-1 font-bold">Instant Response</p>
+            <p class="text-xl font-bold">24/7 Live Chat Support</p>
         </a>
 
-        <a href="mailto:chelinjuly@gmail.com?subject=Inquiry%20Pinoy365" class="block p-4 bg-yellow-500 text-black rounded-xl font-black hover:bg-yellow-400 transition">
-            <p class="text-sm opacity-70">Send Email Directly</p>
-            <p class="text-xl">chelinjuly@gmail.com</p>
+        <div class="p-8 bg-zinc-900 border border-yellow-500/20 rounded-3xl text-left shadow-2xl mt-10">
+            <h2 class="text-2xl font-black text-yellow-500 mb-6 uppercase tracking-tight">Direct Message</h2>
+            
+            <form action="https://formspree.io/f/xjgeagyd" method="POST" class="space-y-5">
+                <div>
+                    <label class="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required 
+                        class="w-full bg-black border border-zinc-800 rounded-xl p-4 text-white focus:border-yellow-500 outline-none transition-all">
+                </div>
+                
+                <div>
+                    <label class="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Email Address</label>
+                    <input type="email" name="_replyto" placeholder="your@email.com" required 
+                        class="w-full bg-black border border-zinc-800 rounded-xl p-4 text-white focus:border-yellow-500 outline-none transition-all">
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Message</label>
+                    <textarea name="message" placeholder="Type your message here..." required rows="4" 
+                        class="w-full bg-black border border-zinc-800 rounded-xl p-4 text-white focus:border-yellow-500 outline-none transition-all resize-none"></textarea>
+                </div>
+
+                <button type="submit" 
+                    class="w-full bg-yellow-500 text-black font-black py-5 rounded-2xl hover:bg-yellow-400 hover:scale-[1.02] active:scale-95 transition-all shadow-[0_15px_30px_rgba(234,179,8,0.2)]">
+                    SUBMIT MESSAGE
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-12">
+        <a href="index.html" class="text-gray-600 hover:text-yellow-500 transition text-sm flex items-center justify-center gap-2">
+            <span>←</span> Back to PINOY365 Home
         </a>
     </div>
 
-    <div class="mt-10">
-        <a href="index.html" class="text-gray-500 underline text-sm">Back to Home</a>
-    </div>
 </body>
 </html>
