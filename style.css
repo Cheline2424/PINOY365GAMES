@@ -1337,23 +1337,24 @@ main img, .content img {
     border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
-/* Pengaturan Logo agar rapi di semua perangkat */
-nav img, header img {
-    max-height: 30px !important; /* Ukuran pas untuk HP */
-    width: auto !important;
-    object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;
+/* --- PERBAIKAN GAMBAR MENJADI KECIL & RAPI --- */
+
+main img, .content img {
+    /* Gambar hanya akan mengambil 50% lebar layar di HP, tidak penuh lagi */
+    width: 50% !important; 
+    min-width: 280px !important; /* Tapi jangan sampai terlalu kecil di HP jadul */
+    max-width: 400px !important; /* Di PC dia akan tetap kecil, tidak melar */
+    
+    height: auto !important;
+    margin: 1.5rem auto !important; /* Tetap di tengah */
+    display: block;
+    border-radius: 12px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
-/* Penyesuaian untuk layar Tablet & Desktop */
-@media (min-width: 768px) {
-    nav img, header img {
-        max-height: 45px !important;
-        margin-left: 0; /* Logo kembali ke kiri di desktop jika perlu */
-    }
-    
-    main img, .content img {
-        max-width: 800px !important; /* Di PC gambar bisa sedikit lebih besar tapi tidak full */
-    }
+/* Logo tetap kecil */
+nav img, header img {
+    max-height: 28px !important;
+    width: auto !important;
+    margin: 0 auto;
 }
