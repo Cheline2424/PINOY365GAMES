@@ -1323,18 +1323,37 @@ article img,
     border-radius: 12px;
 }
 
-/* 2. Perkecil Logo Header khusus Mobile */
-nav img, 
-header img {
-    max-height: 32px !important; /* Ukuran logo yang pas untuk HP */
-    width: auto !important;
-    object-fit: contain;
+/* --- PERBAIKAN FINAL GAMBAR & LOGO --- */
+
+/* Pengaturan Gambar Konten/Guide */
+main img, .content img {
+    width: 100% !important;
+    max-width: 600px !important; /* Batas maksimal di PC agar tidak full layar */
+    height: auto !important;
+    margin: 2rem auto !important; /* Otomatis ke tengah */
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
-/* 3. Kembalikan ukuran Logo di Desktop (Layar Lebar) */
+/* Pengaturan Logo agar rapi di semua perangkat */
+nav img, header img {
+    max-height: 30px !important; /* Ukuran pas untuk HP */
+    width: auto !important;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Penyesuaian untuk layar Tablet & Desktop */
 @media (min-width: 768px) {
-    nav img, 
-    header img {
-        max-height: 50px !important; 
+    nav img, header img {
+        max-height: 45px !important;
+        margin-left: 0; /* Logo kembali ke kiri di desktop jika perlu */
+    }
+    
+    main img, .content img {
+        max-width: 800px !important; /* Di PC gambar bisa sedikit lebih besar tapi tidak full */
     }
 }
