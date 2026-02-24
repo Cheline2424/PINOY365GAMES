@@ -1309,3 +1309,32 @@ nav img, .logo-utama {
         max-height: 55px !important;
     }
 }
+
+/* --- PERBAIKAN GAMBAR & LOGO GLOBAL --- */
+
+/* 1. Paksa semua gambar di dalam konten agar tidak melebar keluar layar HP */
+main img, 
+article img, 
+.content img {
+    max-width: 90% !important; /* Gambar hanya 90% lebar layar */
+    height: auto !important;
+    margin: 1.5rem auto !important; /* Otomatis ke tengah */
+    display: block;
+    border-radius: 12px;
+}
+
+/* 2. Perkecil Logo Header khusus Mobile */
+nav img, 
+header img {
+    max-height: 32px !important; /* Ukuran logo yang pas untuk HP */
+    width: auto !important;
+    object-fit: contain;
+}
+
+/* 3. Kembalikan ukuran Logo di Desktop (Layar Lebar) */
+@media (min-width: 768px) {
+    nav img, 
+    header img {
+        max-height: 50px !important; 
+    }
+}
