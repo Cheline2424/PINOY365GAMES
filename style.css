@@ -1,3 +1,4 @@
+* { box-sizing: border-box; }
 /*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
@@ -1289,4 +1290,22 @@
       --tw-scale-z: 1;
     }
   }
+}
+/* Menjamin semua gambar tidak meluap keluar layar di HP */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Pengaturan Logo khusus Mobile agar tidak terlalu besar */
+nav img, .logo-utama {
+    max-height: 35px !important;
+    width: auto !important;
+}
+
+@media (min-width: 768px) {
+    nav img, .logo-utama {
+        max-height: 55px !important;
+    }
 }
