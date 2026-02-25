@@ -1358,3 +1358,28 @@ nav img, header img {
     width: auto !important;
     margin: 0 auto;
 }
+
+/* Cetakan Tombol More Pages agar Seragam */
+.more-pages-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 15px;
+}
+
+.btn-more-page {
+    background: rgba(24, 24, 27, 0.6) !important;
+    border: 1px solid rgba(251, 191, 36, 0.2) !important;
+    padding: 12px 5px;
+    border-radius: 12px !important;
+    text-align: center;
+    text-decoration: none !important;
+    display: block;
+}
+
+.btn-more-page span {
+    color: #fbbf24 !important;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
